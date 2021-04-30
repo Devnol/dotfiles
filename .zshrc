@@ -9,7 +9,7 @@
  #fi
 
 #Load theme
-source .zshtheme
+source ~/.zshtheme
 
 # ------------------- ENVIRONMENT VARIABLES AND TOOLS ----------------------
 export PATH
@@ -60,8 +60,13 @@ fi
 export PICO_SDK_PATH=~/Documents/CS_Projects/Pico/pico-sdk
 
 #ZSH syntax highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+if [ uname = Darwin ] 
+then
+	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else 
+	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+	
 # --------------------------- PERSONAL ALIASES -----------------------------------
 #alias ls='ls -GFha'
 alias ls='natls -ln'
