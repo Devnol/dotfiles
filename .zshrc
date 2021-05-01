@@ -63,7 +63,7 @@ export PICO_SDK_PATH=~/Documents/CS_Projects/Pico/pico-sdk
 if [ uname = Darwin ] 
 then
 	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-else 
+elif [ uname = Linux ] 
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 	
