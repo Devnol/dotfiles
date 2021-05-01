@@ -44,7 +44,7 @@ export NVM_DIR="$HOME/.nvm"
 export Path=$PATH:~/.android-sdk/platform-tools/
 
 #macOS-only toolpaths:
-if [ uname = Darwin ]
+if [ $(uname) = Darwin ]
 then
 	# Setting PATH for Python 3.9 in macOS
 	# The original version is saved in .bash_profile.pysave
@@ -60,10 +60,11 @@ fi
 export PICO_SDK_PATH=~/Documents/CS_Projects/Pico/pico-sdk
 
 #ZSH syntax highlighting
-if [ uname = Darwin ] 
+if [ $(uname) = Darwin ] 
 then
 	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-elif [ uname = Linux ] 
+elif [ $(uname) = Linux ] 
+then
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 	
@@ -74,7 +75,7 @@ alias projects='cd ~/Documents/CS_Projects'
 alias ip='ifconfig | grep 192.168.1'
 alias top='bpytop'
 # macOS-only aliases:
-if [ uname = darwin ]
+if [ $(uname) = Darwin ]
 then
 	alias rm='trash -vF'
 	alias odir='open -a Finder.app ./'
