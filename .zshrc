@@ -76,7 +76,7 @@ alias locip='ifconfig | grep 192.168.1'
 alias pubip='curl checkip.amazonaws.com'
 alias top='bpytop'
 alias fucking='sudo '
-alias fuck='sudo $(fc -ln -1)'
+alias fuck='sudo $SHELL -c $(fc -ln -1)'
 # macOS-only aliases:
 if [ $(uname) = Darwin ]
 then
