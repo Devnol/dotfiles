@@ -22,7 +22,7 @@ case ":${PATH}:" in
     *)
         # Prepending path in case a system-installed rustc needs to be overridden
         export PATH="$HOME/.cargo/bin:$PATH"
-        ;;
+       ;;
 esac
 
 
@@ -72,8 +72,11 @@ fi
 #alias ls='ls -GFha'
 alias ls='natls -ln'
 alias projects='cd ~/Documents/CS_Projects'
-alias ip='ifconfig | grep 192.168.1'
+alias locip='ifconfig | grep 192.168.1'
+alias pubip='curl checkip.amazonaws.com'
 alias top='bpytop'
+alias fucking='sudo '
+alias fuck='sudo $(fc -ln -1)'
 # macOS-only aliases:
 if [ $(uname) = Darwin ]
 then
