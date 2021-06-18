@@ -82,6 +82,4 @@ if [ $(uname) = Darwin ]
 then
 	alias rm='trash -vF'
 	alias odir='open -a Finder.app ./'
-	alias music='launchctl load ~/Library/LaunchAgents/moe.yuru.music-rpc.plist'
-	alias umusic='launchctl unload ~/Library/LaunchAgents/moe.yuru.music-rpc.plist'
 fi
