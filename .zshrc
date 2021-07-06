@@ -35,6 +35,9 @@ export DEVKITARM=${DEVKITPRO}/devkitARM
 export DEVKITPPC=${DEVKITPRO}/devkitPPC
 export PATH=${DEVKITPRO}/tools/bin:$PATH
 
+# pkg-config environment variables
+export PKG_CONFIG_PATH=/usr/local/Cellar/raylib/3.7.0/lib/pkgconfig # raylib
+
 # Node.js Version Manager environment variables and tools
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -81,5 +84,6 @@ alias fuck='sudo $SHELL -c $(fc -ln -1)'
 if [ $(uname) = Darwin ]
 then
 	alias rm='trash -vF'
+	alias picosend='cp ./build/*.uf2 /Volumes/RPI-RP2/' #send binary to connected rpi pico
 	alias odir='open -a Finder.app ./'
 fi
