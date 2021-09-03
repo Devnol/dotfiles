@@ -47,7 +47,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #Android platform tools
-export Path=$PATH:~/.android-sdk/platform-tools/
+export PATH=$PATH:~/.android-sdk/platform-tools/
 
 #macOS-only toolpaths:
 if [ $(uname) = Darwin ]
