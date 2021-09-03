@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Set locale
+export LANG="en_US.UTF-8"
+#
 # Preferred editor for local and remote sessions
  #if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
@@ -61,6 +64,9 @@ fi
 
 #Raspberry Pi Pico SDK
 export PICO_SDK_PATH=~/Documents/CS_Projects/Pico/pico-sdk
+
+export OPENSSL_ROOT_DIR="/usr/local/Cellar/openssl@1.1/1.1.1l/"
+export OPENSSL_LIBRARIES="/usr/local/Cellular/openssl@1.1/1.1.1l/lib"
 
 #ZSH syntax highlighting
 if [ $(uname) = Darwin ] 
