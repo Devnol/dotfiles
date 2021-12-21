@@ -14,6 +14,9 @@ export LANG="en_US.UTF-8"
 #Load theme
 source ~/.zshtheme
 
+# Make tab completion case-insensitive 
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 # ------------------- ENVIRONMENT VARIABLES AND TOOLS ----------------------
 export PATH
 
