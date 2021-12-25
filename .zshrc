@@ -42,7 +42,7 @@ export DEVKITPPC=${DEVKITPRO}/devkitPPC
 export PATH=${DEVKITPRO}/tools/bin:$PATH
 
 # pkg-config environment variables
-export PKG_CONFIG_PATH=/usr/local/Cellar/raylib/3.7.0/lib/pkgconfig # raylib
+export PKG_CONFIG_PATH=/usr/local/Cellar/raylib/4.0.0/lib/pkgconfig # raylib
 
 # Node.js Version Manager environment variables and tools
 export NVM_DIR="$HOME/.nvm"
