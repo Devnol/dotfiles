@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+if [ $(uname) = Darwin ]; then  . "$HOME/.fig/shell/zshrc.pre.zsh"; fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -35,13 +37,15 @@ esac
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
+# go binaries
+export PATH="$HOME/go/bin:$PATH"
+
 # Devkitpro path exports
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=${DEVKITPRO}/devkitARM
 export DEVKITPPC=${DEVKITPRO}/devkitPPC
 export PATH=${DEVKITPRO}/tools/bin:$PATH
 
-# pkg-config environment variables
 export PKG_CONFIG_PATH=/usr/local/Cellar/raylib/4.0.0/lib/pkgconfig # raylib
 
 # Node.js Version Manager environment variables and tools
@@ -87,12 +91,15 @@ alias projects='cd ~/Documents/CS_Projects'
 alias locip='ifconfig | grep 192.168.1'
 alias pubip='curl checkip.amazonaws.com'
 alias top='bpytop'
-alias fucking='sudo '
-alias fuck='sudo $SHELL -c $(fc -ln -1)'
+alias nkit2iso='mono /Users/pakou/Documents/Games/NKit_v1.4/RecoverToISO.exe'
+eval $(thefuck --alias) #thefuck include
 # macOS-only aliases:
 if [ $(uname) = Darwin ]
 then
 	alias rm='trash -vF'
 	alias picosend='cp ./build/*.uf2 /Volumes/RPI-RP2/' #send binary to connected rpi pico
 	alias odir='open -a Finder.app ./'
+	# Fig post block. Keep at the bottom of this file.
+	. "$HOME/.fig/shell/zshrc.post.zsh"
 fi
+
