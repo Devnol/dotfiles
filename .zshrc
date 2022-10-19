@@ -1,7 +1,10 @@
-# Fig pre block. Keep at the top of this file.
-if [ $(uname) = Darwin ]; then  . "$HOME/.fig/shell/zshrc.pre.zsh"; fi
+f [ $(uname) = Darwin ]; then  ; fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+# Fig pre block. Keep at the top of this file.
 
 # Set locale
 export LANG="en_US.UTF-8"
@@ -90,7 +93,7 @@ alias ls='natls -ln'
 alias projects='cd ~/Documents/CS_Projects'
 alias locip='ifconfig | grep 192.168.1'
 alias pubip='curl checkip.amazonaws.com'
-alias top='bpytop'
+alias top='btop'
 alias nkit2iso='mono /Users/pakou/Documents/Games/NKit_v1.4/RecoverToISO.exe'
 eval $(thefuck --alias) #thefuck include
 # macOS-only aliases:
@@ -99,7 +102,10 @@ then
 	alias rm='trash -vF'
 	alias picosend='cp ./build/*.uf2 /Volumes/RPI-RP2/' #send binary to connected rpi pico
 	alias odir='open -a Finder.app ./'
+
 	# Fig post block. Keep at the bottom of this file.
-	. "$HOME/.fig/shell/zshrc.post.zsh"
+	[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
 fi
+
 
