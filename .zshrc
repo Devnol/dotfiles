@@ -88,8 +88,8 @@ then
 fi
 	
 # --------------------------- PERSONAL ALIASES -----------------------------------
-#alias ls='ls -GFha'
-alias ls='natls -ln'
+alias ls='ls -GF1hla'
+#alias ls='natls -ln'
 alias projects='cd ~/Documents/CS_Projects'
 alias locip='ifconfig | grep 192.168.1'
 alias pubip='curl checkip.amazonaws.com'
